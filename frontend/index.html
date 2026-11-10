@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxeNFT — Mint</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #171221; color: #f3efe9;
+           display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+    .card { background: #221a33; border: 1px solid #3a2f52; border-radius: 16px;
+            padding: 32px; max-width: 420px; width: 92%; text-align: center; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    p { color: #bdb2d4; }
+    button { background: #b08d57; color: #171221; border: 0; border-radius: 10px;
+             padding: 12px 20px; font-size: 16px; font-weight: 600; cursor: pointer; margin: 6px; }
+    button:disabled { opacity: .5; cursor: not-allowed; }
+    input { width: 70px; padding: 10px; border-radius: 8px; border: 1px solid #3a2f52;
+            background: #171221; color: #f3efe9; text-align: center; font-size: 16px; }
+    #status { min-height: 20px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>LuxeNFT</h1>
+    <p>Sample NFT minting dApp — connect your wallet and mint.</p>
+    <p id="supply">Supply: – / 1000 · Price: 0.01 ETH</p>
+    <button id="connectBtn">Connect Wallet</button>
+    <div>
+      <input id="qty" type="number" min="1" max="5" value="1" />
+      <button id="mintBtn" disabled>Mint</button>
+    </div>
+    <p id="status"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
